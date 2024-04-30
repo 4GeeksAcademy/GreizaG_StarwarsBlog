@@ -1,3 +1,5 @@
+const CHARACTERS_URL = 
+
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {

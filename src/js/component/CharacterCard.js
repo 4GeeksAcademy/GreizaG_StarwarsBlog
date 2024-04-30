@@ -2,7 +2,7 @@ import React from "react";
 
 export const CharacterCard = () => {
     return (
-        <div className="card" style={{ width: "15rem" }}>
+        <div className="card" style={{ width: "18rem" }}>
             <img src="https://starwars-visualguide.com/assets/img/characters/1.jpg" alt="Debería aparecer otra imagen"
                 onError="this.src='https://starwars-visualguide.com/assets/img/placeholder.jpg'"
                 className="m-1 rounded" />
