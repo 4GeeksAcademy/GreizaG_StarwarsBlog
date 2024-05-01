@@ -1,44 +1,62 @@
-const CHARACTERS_URL = 
-
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
-			demo: [
-				{
-					title: "FIRST",
-					background: "white",
-					initial: "white"
-				},
-				{
-					title: "SECOND",
-					background: "white",
-					initial: "white"
-				}
-			]
+			characters: [],
+
+			planets: [],
+
+			starships: [],
 		},
 		actions: {
-			// Use getActions to call a function within a fuction
-			exampleFunction: () => {
-				getActions().changeColor(0, "green");
+			//Personajes de StarWars
+			getCharacters: () => {
+				fetch("https://www.swapi.tech/api/people")
+					.then(response => {
+						console.log(response);
+						return response.json();
+					})
+					.then((data) => {
+						console.log("Data: ", data)
+						console.log(data.results)
+						setStore({ characters: data.results })
+					})
+					.catch((error) => {
+						console.log(error)
+					})
 			},
-			loadSomeData: () => {
-				/**
-					fetch().then().then(data => setStore({ "foo": data.bar }))
-				*/
+
+			//Planetas de StarWars
+			getPlanets: () => {
+				fetch("https://www.swapi.tech/api/planets")
+					.then(response => {
+						console.log(response);
+						return response.json();
+					})
+					.then((data) => {
+						console.log("Data: ", data)
+						console.log(data.results)
+						setStore({ planets: data.results })
+					})
+					.catch((error) => {
+						console.log(error)
+					})
 			},
-			changeColor: (index, color) => {
-				//get the store
-				const store = getStore();
 
-				//we have to loop the entire demo array to look for the respective index
-				//and change its color
-				const demo = store.demo.map((elm, i) => {
-					if (i === index) elm.background = color;
-					return elm;
-				});
-
-				//reset the global store
-				setStore({ demo: demo });
+			//Vehículos de StarWars
+			getStarships: () => {
+				fetch("https://www.swapi.tech/api/starships")
+					.then(response => {
+						console.log(response);
+						return response.json();
+					})
+					.then((data) => {
+						console.log("Data: ", data)
+						console.log(data.results)
+						setStore({ starships: data.results })
+					})
+					.catch((error) => {
+						console.log(error)
+					})
 			}
 		}
 	};
