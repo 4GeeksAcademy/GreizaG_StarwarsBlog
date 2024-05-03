@@ -12,7 +12,7 @@ export const PlanetDetail = () => {
 
     return (
         <>
-            <div className="container mt-5 p-3 border border-2 border-danger-subtle rounded-2">
+            <div className="container mt-5 p-3 border border-2 rounded-2 border-danger">
                 <div className="d-flex row mb-5">
                     <div className="col">
                         <img src={`https://starwars-visualguide.com/assets/img/planets/${params.id}.jpg` == "https://starwars-visualguide.com/assets/img/planets/1.jpg" ?
@@ -21,7 +21,7 @@ export const PlanetDetail = () => {
                             className="m-1 rounded" />
                     </div>
                     <div className="col">
-                        <h2 className="text-center text-danger fw-bold">{store.planetDetail.name}</h2>
+                        <h2 className="text-center text-danger fw-bold" id="planets">{store.planetDetail.name}</h2>
                         <p className="fw-lighter text-start mt-4 fs-4">
                             Star Wars, conocida también en español como La guerra de las galaxias,
                             es una franquicia y universo compartido de fantasía compuesta primordialmente
@@ -40,27 +40,27 @@ export const PlanetDetail = () => {
                 <div className="container mt-5">
                     <div className="d-flex justify-content-between row">
                         <div className="col">
-                            <p className="text-danger fw-bold text-center">Diameter</p>
+                            <p className="text-danger fw-bold text-center" id="planets">Diameter</p>
                             <p className="text-center fw-lighter">{store.planetDetail.diameter}</p>
                         </div>
                         <div className="col">
-                            <p className="text-danger fw-bold text-center">Gravity</p>
+                            <p className="text-danger fw-bold text-center" id="planets">Gravity</p>
                             <p className="text-center fw-lighter">{store.planetDetail.gravity}</p>
                         </div>
                         <div className="col">
-                            <p className="text-danger fw-bold text-center">Population</p>
+                            <p className="text-danger fw-bold text-center" id="planets">Population</p>
                             <p className="text-center fw-lighter">{store.planetDetail.population}</p>
                         </div>
                         <div className="col">
-                            <p className="text-danger fw-bold text-center">Climate</p>
+                            <p className="text-danger fw-bold text-center" id="planets">Climate</p>
                             <p className="text-center fw-lighter">{store.planetDetail.climate}</p>
                         </div>
                         <div className="col">
-                            <p className="text-danger fw-bold text-center">Terrain</p>
+                            <p className="text-danger fw-bold text-center" id="planets">Terrain</p>
                             <p className="text-center fw-lighter">{store.planetDetail.terrain}</p>
                         </div>
                         <div className="col">
-                            <p className="text-danger fw-bold text-center">Surface Water</p>
+                            <p className="text-danger fw-bold text-center" id="planets">Surface Water</p>
                             <p className="text-center fw-lighter">{store.planetDetail.surface_water}</p>
                         </div>
                     </div>

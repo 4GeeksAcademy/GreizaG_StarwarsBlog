@@ -12,7 +12,7 @@ export const StarshipDetail = () => {
 
     return (
         <>
-            <div className="container mt-5 p-3 border border-2 border-danger-subtle rounded-2">
+            <div className="container mt-5 p-3 border border-2 border-warning-subtle rounded-2">
                 <div className="d-flex row mb-5">
                     <div className="col">
                         <img src={`https://starwars-visualguide.com/assets/img/starships/${params.id}.jpg` ==
@@ -26,7 +26,7 @@ export const StarshipDetail = () => {
                             className="m-1 rounded" />
                     </div>
                     <div className="col">
-                        <h2 className="text-center text-danger fw-bold">{store.starshipDetail.name}</h2>
+                        <h2 className="text-center fw-bold text-warning">{store.starshipDetail.name}</h2>
                         <p className="fw-lighter text-start mt-4 fs-4">
                             Star Wars, conocida también en español como La guerra de las galaxias,
                             es una franquicia y universo compartido de fantasía compuesta primordialmente
@@ -41,38 +41,38 @@ export const StarshipDetail = () => {
                         </p>
                     </div>
                 </div>
-                <hr className="border-danger border border-1" />
+                <hr className="border-warning border border-1" />
                 <div className="container mt-5">
                     <div className="d-flex justify-content-between row">
                         <div className="col">
-                            <p className="text-danger fw-bold text-center">Model</p>
+                            <p className="fw-bold text-center text-warning">Model</p>
                             <p className="text-center fw-lighter">{store.starshipDetail.model}</p>
                         </div>
                         <div className="col">
-                            <p className="text-danger fw-bold text-center">Starship Class</p>
+                            <p className="fw-bold text-center text-warning">Starship Class</p>
                             <p className="text-center fw-lighter">{store.starshipDetail.starship_class}</p>
                         </div>
                         <div className="col">
-                            <p className="text-danger fw-bold text-center">Manufacturer</p>
+                            <p className="fw-bold text-center text-warning">Manufacturer</p>
                             <p className="text-center fw-lighter">{store.starshipDetail.manufacturer}</p>
                         </div>
                         <div className="col">
-                            <p className="text-danger fw-bold text-center">Length</p>
+                            <p className="fw-bold text-center text-warning">Length</p>
                             <p className="text-center fw-lighter">{store.starshipDetail.length}</p>
                         </div>
                         <div className="col">
-                            <p className="text-danger fw-bold text-center">Crew</p>
+                            <p className="fw-bold text-center text-warning">Crew</p>
                             <p className="text-center fw-lighter">{store.starshipDetail.crew}</p>
                         </div>
                         <div className="col">
-                            <p className="text-danger fw-bold text-center">Passengers</p>
+                            <p className="fw-bold text-center text-warning">Passengers</p>
                             <p className="text-center fw-lighter">{store.starshipDetail.passengers}</p>
                         </div>
                     </div>
                 </div>
                 <div className="d-flex justify-content-end">
                     <Link to="/">
-                        <button className="btn btn-outline-danger btn-sm">Back</button>
+                        <button className="btn btn-outline-warning btn-sm">Back</button>
                     </Link>
                 </div>
             </div>
