@@ -9,7 +9,7 @@ export const StarshipCard = ({ name, id }) => {
                 `${id}` == 3 ? "https://i.imgur.com/yw3Gstj.jpeg" :
                     `${id}` == 17 ? "https://i.imgur.com/HzKyhvj.jpeg" :
                         `https://starwars-visualguide.com/assets/img/starships/${id}.jpg`}
-                className="rounded card-img-top" />
+                className="rounded-top card-img-top" />
             <div className="card-body">
                 <h5 className="card-title mb-4 fw-lighter font-monospace fs-6 fs-md-4" id="starships">{name}</h5>
                 <div className="d-flex justify-content-end">
