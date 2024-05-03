@@ -6,6 +6,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 			planets: [],
 
 			starships: [],
+
+			characterDetail: {},
 		},
 		actions: {
 			//Personajes de StarWars
@@ -57,6 +59,14 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.catch((error) => {
 						console.log(error)
 					})
+			},
+
+			//Detalles de personajes
+			getCharacterDetail: (id) => {
+				fetch(`https://www.swapi.tech/api/people/${id}`)
+					.then(response => response.json())
+					.then(data => { setStore({ characterDetail: data.result.properties }) })
+					.catch(error => { error })
 			}
 		}
 	};
