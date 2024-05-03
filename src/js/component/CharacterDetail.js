@@ -12,7 +12,7 @@ export const CharacterDetail = () => {
 
     return (
         <>
-            <div className="container mt-5 p-3 border border-2 border-danger-subtle rounded-2">
+            <div className="container mt-5 p-3 border border-2 border-danger-subtle rounded-2 bg-dark">
                 <div className="d-flex row mb-5">
                     <div className="col">
                         <img src={`https://starwars-visualguide.com/assets/img/characters/${params.id}.jpg`}
@@ -20,7 +20,7 @@ export const CharacterDetail = () => {
                     </div>
                     <div className="col">
                         <h2 className="text-center text-danger fw-bold">{store.characterDetail.name}</h2>
-                        <p className="fw-lighter text-start mt-4 fs-4">
+                        <p className="fw-lighter text-start mt-4 fs-4 text-light">
                             Star Wars, conocida también en español como La guerra de las galaxias,
                             es una franquicia y universo compartido de fantasía compuesta primordialmente
                             de una serie de películas concebidas por el cineasta estadounidense George Lucas
@@ -39,27 +39,27 @@ export const CharacterDetail = () => {
                     <div className="d-flex justify-content-between row">
                         <div className="col">
                             <p className="text-danger fw-bold text-center">Name</p>
-                            <p className="text-center fw-lighter">{store.characterDetail.name}</p>
+                            <p className="text-center fw-lighter text-light">{store.characterDetail.name}</p>
                         </div>
                         <div className="col">
                             <p className="text-danger fw-bold text-center">Birth Year</p>
-                            <p className="text-center fw-lighter">{store.characterDetail.birth_year}</p>
+                            <p className="text-center fw-lighter text-light">{store.characterDetail.birth_year}</p>
                         </div>
                         <div className="col">
                             <p className="text-danger fw-bold text-center">Gender</p>
-                            <p className="text-center fw-lighter">{store.characterDetail.gender}</p>
+                            <p className="text-center fw-lighter text-light">{store.characterDetail.gender}</p>
                         </div>
                         <div className="col">
                             <p className="text-danger fw-bold text-center">Height</p>
-                            <p className="text-center fw-lighter">{store.characterDetail.height}</p>
+                            <p className="text-center fw-lighter text-light">{store.characterDetail.height}</p>
                         </div>
                         <div className="col">
                             <p className="text-danger fw-bold text-center">Skin Color</p>
-                            <p className="text-center fw-lighter">{store.characterDetail.skin_color}</p>
+                            <p className="text-center fw-lighter text-light">{store.characterDetail.skin_color}</p>
                         </div>
                         <div className="col">
                             <p className="text-danger fw-bold text-center">Eye Color</p>
-                            <p className="text-center fw-lighter">{store.characterDetail.eye_color}</p>
+                            <p className="text-center fw-lighter text-light">{store.characterDetail.eye_color}</p>
                         </div>
                     </div>
                 </div>

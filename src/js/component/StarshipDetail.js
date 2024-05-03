@@ -12,7 +12,7 @@ export const StarshipDetail = () => {
 
     return (
         <>
-            <div className="container mt-5 p-3 border border-2 border-warning-subtle rounded-2">
+            <div className="container mt-5 p-3 border border-2 border-warning-subtle rounded-2 bg-dark">
                 <div className="d-flex row mb-5">
                     <div className="col">
                         <img src={`https://starwars-visualguide.com/assets/img/starships/${params.id}.jpg` ==
@@ -27,7 +27,7 @@ export const StarshipDetail = () => {
                     </div>
                     <div className="col">
                         <h2 className="text-center fw-bold text-warning">{store.starshipDetail.name}</h2>
-                        <p className="fw-lighter text-start mt-4 fs-4">
+                        <p className="fw-lighter text-start mt-4 fs-4 text-light">
                             Star Wars, conocida también en español como La guerra de las galaxias,
                             es una franquicia y universo compartido de fantasía compuesta primordialmente
                             de una serie de películas concebidas por el cineasta estadounidense George Lucas
@@ -46,27 +46,27 @@ export const StarshipDetail = () => {
                     <div className="d-flex justify-content-between row">
                         <div className="col">
                             <p className="fw-bold text-center text-warning">Model</p>
-                            <p className="text-center fw-lighter">{store.starshipDetail.model}</p>
+                            <p className="text-center fw-lighter text-light">{store.starshipDetail.model}</p>
                         </div>
                         <div className="col">
                             <p className="fw-bold text-center text-warning">Starship Class</p>
-                            <p className="text-center fw-lighter">{store.starshipDetail.starship_class}</p>
+                            <p className="text-center fw-lighter text-light">{store.starshipDetail.starship_class}</p>
                         </div>
                         <div className="col">
                             <p className="fw-bold text-center text-warning">Manufacturer</p>
-                            <p className="text-center fw-lighter">{store.starshipDetail.manufacturer}</p>
+                            <p className="text-center fw-lighter text-light">{store.starshipDetail.manufacturer}</p>
                         </div>
                         <div className="col">
                             <p className="fw-bold text-center text-warning">Length</p>
-                            <p className="text-center fw-lighter">{store.starshipDetail.length}</p>
+                            <p className="text-center fw-lighter text-light">{store.starshipDetail.length}</p>
                         </div>
                         <div className="col">
                             <p className="fw-bold text-center text-warning">Crew</p>
-                            <p className="text-center fw-lighter">{store.starshipDetail.crew}</p>
+                            <p className="text-center fw-lighter text-light">{store.starshipDetail.crew}</p>
                         </div>
                         <div className="col">
                             <p className="fw-bold text-center text-warning">Passengers</p>
-                            <p className="text-center fw-lighter">{store.starshipDetail.passengers}</p>
+                            <p className="text-center fw-lighter text-light">{store.starshipDetail.passengers}</p>
                         </div>
                     </div>
                 </div>
