@@ -2,12 +2,12 @@ import React, { useContext, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import { Context } from "../store/appContext.js"
 
-export const PlanetDetail = () => {
+export const StarshipDetail = () => {
     const { store, actions } = useContext(Context);
     const params = useParams();
     console.log("Params: ", params)
     useEffect(() => {
-        actions.getPlanetDetail(params.id)
+        actions.getStarshipDetail(params.id)
     }, [])
 
     return (
@@ -15,13 +15,18 @@ export const PlanetDetail = () => {
             <div className="container mt-5 p-3 border border-2 border-danger-subtle rounded-2">
                 <div className="d-flex row mb-5">
                     <div className="col">
-                        <img src={`https://starwars-visualguide.com/assets/img/planets/${params.id}.jpg` == "https://starwars-visualguide.com/assets/img/planets/1.jpg" ?
+                        <img src={`https://starwars-visualguide.com/assets/img/starships/${params.id}.jpg` ==
+                            "https://starwars-visualguide.com/assets/img/starships/2.jpg" ||
+                            `https://starwars-visualguide.com/assets/img/starships/${params.id}.jpg` ==
+                            "https://starwars-visualguide.com/assets/img/starships/3.jpg" ||
+                            `https://starwars-visualguide.com/assets/img/starships/${params.id}.jpg` ==
+                            "https://starwars-visualguide.com/assets/img/starships/17.jpg" ?
                             "https://starwars-visualguide.com/assets/img/placeholder.jpg" :
-                            `https://starwars-visualguide.com/assets/img/planets/${params.id}.jpg`}
+                            `https://starwars-visualguide.com/assets/img/starships/${params.id}.jpg`}
                             className="m-1 rounded" />
                     </div>
                     <div className="col">
-                        <h2 className="text-center text-danger fw-bold">{store.planetDetail.name}</h2>
+                        <h2 className="text-center text-danger fw-bold">{store.starshipDetail.name}</h2>
                         <p className="fw-lighter text-start mt-4 fs-4">
                             Star Wars, conocida también en español como La guerra de las galaxias,
                             es una franquicia y universo compartido de fantasía compuesta primordialmente
@@ -40,28 +45,28 @@ export const PlanetDetail = () => {
                 <div className="container mt-5">
                     <div className="d-flex justify-content-between row">
                         <div className="col">
-                            <p className="text-danger fw-bold text-center">Diameter</p>
-                            <p className="text-center fw-lighter">{store.planetDetail.diameter}</p>
+                            <p className="text-danger fw-bold text-center">Model</p>
+                            <p className="text-center fw-lighter">{store.starshipDetail.model}</p>
                         </div>
                         <div className="col">
-                            <p className="text-danger fw-bold text-center">Gravity</p>
-                            <p className="text-center fw-lighter">{store.planetDetail.gravity}</p>
+                            <p className="text-danger fw-bold text-center">Starship Class</p>
+                            <p className="text-center fw-lighter">{store.starshipDetail.starship_class}</p>
                         </div>
                         <div className="col">
-                            <p className="text-danger fw-bold text-center">Population</p>
-                            <p className="text-center fw-lighter">{store.planetDetail.population}</p>
+                            <p className="text-danger fw-bold text-center">Manufacturer</p>
+                            <p className="text-center fw-lighter">{store.starshipDetail.manufacturer}</p>
                         </div>
                         <div className="col">
-                            <p className="text-danger fw-bold text-center">Climate</p>
-                            <p className="text-center fw-lighter">{store.planetDetail.climate}</p>
+                            <p className="text-danger fw-bold text-center">Length</p>
+                            <p className="text-center fw-lighter">{store.starshipDetail.length}</p>
                         </div>
                         <div className="col">
-                            <p className="text-danger fw-bold text-center">Terrain</p>
-                            <p className="text-center fw-lighter">{store.planetDetail.terrain}</p>
+                            <p className="text-danger fw-bold text-center">Crew</p>
+                            <p className="text-center fw-lighter">{store.starshipDetail.crew}</p>
                         </div>
                         <div className="col">
-                            <p className="text-danger fw-bold text-center">Surface Water</p>
-                            <p className="text-center fw-lighter">{store.planetDetail.surface_water}</p>
+                            <p className="text-danger fw-bold text-center">Passengers</p>
+                            <p className="text-center fw-lighter">{store.starshipDetail.passengers}</p>
                         </div>
                     </div>
                 </div>

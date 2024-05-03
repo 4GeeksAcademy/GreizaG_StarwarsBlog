@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export const StarshipCard = ({ name, id }) => {
 
@@ -16,7 +17,9 @@ export const StarshipCard = ({ name, id }) => {
             <div className="card-body">
                 <h5 className="card-title mb-4 fw-lighter font-monospace fs-4" id="starships">{name}</h5>
                 <div className="d-flex justify-content-end">
-                    <button className="btn btn-outline-danger btn-sm justify-content-end">More <i className="fa-solid fa-angles-right"></i></button>
+                    <Link to={`/starship-detail/${id}`}>
+                        <button className="btn btn-outline-danger btn-sm">More <i className="fa-solid fa-angles-right"></i></button>
+                    </Link>
                 </div>
             </div>
         </div>

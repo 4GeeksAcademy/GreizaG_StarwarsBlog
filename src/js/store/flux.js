@@ -8,6 +8,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 			starships: [],
 
 			characterDetail: {},
+
+			planetDetail: {},
+
+			starshipDetail: {},
 		},
 		actions: {
 			//Personajes de StarWars
@@ -66,6 +70,22 @@ const getState = ({ getStore, getActions, setStore }) => {
 				fetch(`https://www.swapi.tech/api/people/${id}`)
 					.then(response => response.json())
 					.then(data => { setStore({ characterDetail: data.result.properties }) })
+					.catch(error => { error })
+			},
+
+			//Detalles de planetas
+			getPlanetDetail: (id) => {
+				fetch(`https://www.swapi.tech/api/planets/${id}`)
+					.then(response => response.json())
+					.then(data => { setStore({ planetDetail: data.result.properties }) })
+					.catch(error => { error })
+			},
+
+			//Detalles de naves
+			getStarshipDetail: (id) => {
+				fetch(`https://www.swapi.tech/api/starships/${id}`)
+					.then(response => response.json())
+					.then(data => { setStore({ starshipDetail: data.result.properties }) })
 					.catch(error => { error })
 			}
 		}

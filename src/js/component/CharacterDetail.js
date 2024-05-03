@@ -19,7 +19,7 @@ export const CharacterDetail = () => {
                             className="m-1 rounded" />
                     </div>
                     <div className="col">
-                        <h2 className="text-center text-danger fw-bold">Luke Skywalker</h2>
+                        <h2 className="text-center text-danger fw-bold">{store.characterDetail.name}</h2>
                         <p className="fw-lighter text-start mt-4 fs-4">
                             Star Wars, conocida también en español como La guerra de las galaxias,
                             es una franquicia y universo compartido de fantasía compuesta primordialmente
