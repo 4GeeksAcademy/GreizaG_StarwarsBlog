@@ -12,6 +12,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 			planetDetail: {},
 
 			starshipDetail: {},
+
+			favorites: [],
 		},
 		actions: {
 			//Personajes de StarWars
@@ -87,9 +89,24 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.then(response => response.json())
 					.then(data => { setStore({ starshipDetail: data.result.properties }) })
 					.catch(error => { error })
+			},
+
+			//Agregar favoritos
+			addFavorite: (uid, name) => {
+				const favorite = {
+					id: uid,
+					name: name,
+				}
+				const newFavorite = [...getStore().favorites, favorite]
+				setStore({ favorites: newFavorite })
+			},
+
+			//Borrar favoritos
+			deleteFavorites: (uid) => {
+				const favorites = getStore().favorites.filter((favorite) => favorite.id != uid)
 			}
 		}
-	};
+	}
 };
 
 export default getState;

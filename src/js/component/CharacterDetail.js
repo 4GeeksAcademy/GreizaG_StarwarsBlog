@@ -65,7 +65,7 @@ export const CharacterDetail = () => {
                 </div>
                 <div className="d-flex justify-content-end">
                     <Link to="/">
-                        <button className="btn btn-outline-danger btn-sm">Back</button>
+                        <button className="btn btn-outline-danger btn-sm"><i className="fa-solid fa-angles-left"></i> Back</button>
                     </Link>
                 </div>
             </div>
