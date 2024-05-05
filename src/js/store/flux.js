@@ -107,6 +107,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				const updateFavorite = getStore().favorites.filter((favorite) => favorite.id != uid);
 				getStore().favorites = updateFavorite;
 				console.log("Este es updateFavorite: ", updateFavorite);
+				setStore({favorites: updateFavorite})
 			}
 
 		}
