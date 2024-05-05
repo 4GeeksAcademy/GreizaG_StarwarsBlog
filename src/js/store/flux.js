@@ -99,12 +99,16 @@ const getState = ({ getStore, getActions, setStore }) => {
 				}
 				const newFavorite = [...getStore().favorites, favorite]
 				setStore({ favorites: newFavorite })
+				console.log("Esto es favoritos: ", getStore().favorites)
 			},
 
 			//Borrar favoritos
-			deleteFavorites: (uid) => {
-				const favorites = getStore().favorites.filter((favorite) => favorite.id != uid)
+			deleteFavorite: (uid) => {
+				const updateFavorite = getStore().favorites.filter((favorite) => favorite.id != uid);
+				// getStore().favorites = updateFavorite;
+				console.log("Este es updateFavorite: ", updateFavorite);
 			}
+
 		}
 	}
 };

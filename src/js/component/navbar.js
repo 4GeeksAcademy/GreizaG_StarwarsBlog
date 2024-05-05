@@ -16,13 +16,28 @@ export const Navbar = () => {
 						Favorites
 					</button>
 					<ul className="dropdown-menu dropdown-menu-end">
-						{store.favorites.map((favorite) => {
+						{store.favorites.map((favorite, index) => {
 							return (
-								<div key={favorite.name} className="d-flex justify-content-between align-items-center me-2">
-									<li className="dropdown-item">{favorite.name}</li>
-									<i className="fa-solid fa-heart-circle-minus text-danger"></i>
+								<li className="dropdown-item" key={index} style={{ color: "#756b6b" }}>
+									<div className="favorites d-flex justify-content-between">
+										<span>{favorite.name}</span>
+										<div>
+											<i className="fa-solid fa-heart-circle-minus"
+												onClick={() => {
+													actions.deleteFavorite(favorite.id)
+												}}
+												style={{ color: "#756b6b" }}></i>
+										</div>
+									</div>
 									<li><hr className="dropdown-divider" /></li>
-								</div>
+								</li>
+								// <div key={favorite.name} className="favorites d-flex justify-content-between me-2">
+								// 	<li className="dropdown-item">{favorite.name}</li>
+								// 	<div>
+								// 		<i className="fa-solid fa-heart-circle-minus text-danger"></i>
+								// 	</div>
+								// 	<li><hr className="dropdown-divider" /></li>
+								// </div>
 							)
 						})}
 					</ul>

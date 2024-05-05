@@ -15,10 +15,10 @@ body {
     background-size: cover;
 }
 
-.favorite .fa-heart{
+.favorites .fa-heart-circle-minus{
     visibility: hidden;
 }
 
-.favorite:hover .fa-heart{
+.favorites:hover .fa-heart-circle-minus{
     visibility: visible;
 }
