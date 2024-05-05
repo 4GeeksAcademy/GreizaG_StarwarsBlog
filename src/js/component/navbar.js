@@ -31,13 +31,6 @@ export const Navbar = () => {
 									</div>
 									<li><hr className="dropdown-divider" /></li>
 								</li>
-								// <div key={favorite.name} className="favorites d-flex justify-content-between me-2">
-								// 	<li className="dropdown-item">{favorite.name}</li>
-								// 	<div>
-								// 		<i className="fa-solid fa-heart-circle-minus text-danger"></i>
-								// 	</div>
-								// 	<li><hr className="dropdown-divider" /></li>
-								// </div>
 							)
 						})}
 					</ul>
