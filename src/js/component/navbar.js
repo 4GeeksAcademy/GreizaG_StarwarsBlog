@@ -24,7 +24,7 @@ export const Navbar = () => {
 										<div>
 											<i className="fa-solid fa-heart-circle-minus"
 												onClick={() => {
-													actions.deleteFavorite(favorite.id)
+													actions.deleteFavorite(favorite.name)
 												}}
 												style={{ color: "#756b6b" }}></i>
 										</div>
