@@ -105,7 +105,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			//Borrar favoritos
 			deleteFavorite: (uid) => {
 				const updateFavorite = getStore().favorites.filter((favorite) => favorite.id != uid);
-				// getStore().favorites = updateFavorite;
+				getStore().favorites = updateFavorite;
 				console.log("Este es updateFavorite: ", updateFavorite);
 			}
 
