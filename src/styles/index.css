@@ -22,3 +22,13 @@ body {
 .favorites:hover .fa-heart-circle-minus{
     visibility: visible;
 }
+
+.addFavorite {
+    color: grey;
+}.addFavorite:hover {
+    transform: scale(1.2);
+}
+
+.logo:hover {
+    transform: scale(1.2);
+}

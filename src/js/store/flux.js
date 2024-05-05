@@ -108,8 +108,12 @@ const getState = ({ getStore, getActions, setStore }) => {
 				getStore().favorites = updateFavorite;
 				console.log("Este es updateFavorite: ", updateFavorite);
 				setStore({favorites: updateFavorite})
-			}
+			},
 
+			//Cambiar color icono favoritos
+			changeColorFavoriteIcon: (color) => {
+
+			}
 		}
 	}
 };

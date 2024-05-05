@@ -15,7 +15,7 @@ export const PlanetCard = ({ name, id }) => {
                 <h5 className="card-title mb-4 fw-lighter font-monospace fs-6 fs-md-4" id="planets">{name}</h5>
                 <div className="d-flex justify-content-between">
                     <p className="text-light">
-                        <i className="fa-solid fa-heart-circle-plus fs-3" id="planets"
+                        <i className="fa-solid fa-heart-circle-plus fs-3 text-white-50"
                             onClick={() => {
                                 actions.addFavorite(id, name);
                             }}></i>
