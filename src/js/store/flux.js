@@ -14,6 +14,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 			starshipDetail: {},
 
 			favorites: [],
+
+			// heartColor:[{"color": grey}]
 		},
 		actions: {
 			//Personajes de StarWars
@@ -111,9 +113,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 
 			//Cambiar color icono favoritos
-			changeColorFavoriteIcon: (color) => {
+			// changeheartColor: (color) => {
 
-			}
+			// }
 		}
 	}
 };
