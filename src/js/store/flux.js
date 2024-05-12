@@ -13,7 +13,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 
       starshipDetail: {},
 
-<<<<<<< HEAD
 			favorites: [],
 
 			// heartColor:[{"color": grey}]
@@ -35,7 +34,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 						console.log(error)
 					})
 			},
-=======
+
       favorites: [],
     },
     actions: {
@@ -55,7 +54,6 @@ const getState = ({ getStore, getActions, setStore }) => {
             console.log(error);
           });
       },
->>>>>>> refs/remotes/origin/master
 
       //Planetas de StarWars
       getPlanets: () => {
@@ -152,20 +150,8 @@ const getState = ({ getStore, getActions, setStore }) => {
         console.log("Este es updateFavorite: ", updateFavorite);
         setStore({ favorites: updateFavorite });
       },
-
-<<<<<<< HEAD
-			//Cambiar color icono favoritos
-			// changeheartColor: (color) => {
-
-			// }
 		}
 	}
-=======
-      //Cambiar color icono favoritos
-      changeColorFavoriteIcon: (color) => {},
-    },
-  };
->>>>>>> refs/remotes/origin/master
 };
 
 export default getState;
